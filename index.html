@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio | Tailwind From Scratch</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-slate-900 text-slate-100 font-sans">
+
+    <nav class="bg-slate-800/80 backdrop-blur-md sticky top-0 z-50 border-b border-slate-700">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <span class="text-xl font-black tracking-tighter text-cyan-400">DEV.ME</span>
+            <div class="space-x-8 hidden md:flex">
+                <a href="#passions" class="hover:text-cyan-400 transition">Passions</a>
+                <a href="#bucket-list" class="hover:text-cyan-400 transition">Bucket List</a>
+                <button id="themeToggle" class="bg-slate-700 px-3 py-1 rounded-full text-xs">Toggle Vibe</button>
+            </div>
+        </div>
+    </nav>
+
+    <section class="h-screen flex flex-col justify-center items-center text-center px-4">
+        <h1 class="text-6xl font-extrabold mb-4 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+            Hi, I'm Mai
+        </h1>
+        <p class="text-xl text-slate-400 max-w-lg">
+            I'm a dreamer to be great on coding and to exploring the world.
+        </p>
+    </section>
+
+    <section id="passions" class="py-20 max-w-6xl mx-auto px-6">
+        <h2 class="text-3xl font-bold mb-12 border-l-4 border-cyan-500 pl-4">My Passions</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="custom-card p-8 rounded-2xl bg-slate-800 border border-slate-700">
+                <h3 class="text-xl font-bold mb-2 text-cyan-300">Favorite Music 🎵</h3>
+                <p class="text-slate-400">I like acoustic genre of songs because it usually calm songs.</p>
+            </div>
+            <div class="custom-card p-8 rounded-2xl bg-slate-800 border border-slate-700">
+                <h3 class="text-xl font-bold mb-2 text-purple-400">Dream Living 🏙️</h3>
+                <p class="text-slate-400">I'd like to go to Japan as part of exploring the world but I'd like to live a place like province to a have peaceful life</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="bucket-list" class="py-20 bg-slate-800/50">
+        <div class="max-w-6xl mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold mb-6">Bucket List</h2>
+            <button onclick="revealSecret()" class="bg-cyan-600 hover:bg-cyan-500 px-6 py-3 rounded-lg font-bold transition">
+                Click to See My Top Goal
+            </button>
+            <p id="secretGoal" class="mt-6 text-2xl font-mono text-yellow-400 hidden">
+                ✈️ Travel to Japan and to be a better in Web Development!
+            </p>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
